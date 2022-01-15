@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+100.times do
+  task = Task.create(title: Faker::Food.dish, details: Faker::Food.description, completed: false)
+  puts "Task #{task.id} created"
+end
